@@ -2,7 +2,7 @@
 This Projects provides all Front-End functionality for the SBB Money Saver App. The App allows you to summerize your spendings on online ticket purchasing. 
 
 ## Pre Requirements
-Install Node `https://nodejs.org/en` and the Angular CLI `npm -i -g angular-cli`.
+Install Node `https://nodejs.org/en` and all in this Project required Dependencies `npm install`.
 
 ## Development server
 
