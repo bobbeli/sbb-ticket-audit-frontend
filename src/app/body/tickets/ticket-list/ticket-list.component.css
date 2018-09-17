@@ -1,0 +1,19 @@
+:host {
+	width: 100%;
+}
+
+table {
+	width: 90%;
+}
+
+.mat-elevation-z8{
+	box-shadow: none;
+}
+
+th.mat-sort-header-sorted {
+	color: black;
+}
+
+td.mat-cell{
+	text-align: left;
+}

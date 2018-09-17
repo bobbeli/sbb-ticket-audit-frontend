@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sbb-cashier';
+  title: string = 'SBB Money Saver';
+
+
+  public get getTitle(): string {
+    return this.title;
+  }
 }
