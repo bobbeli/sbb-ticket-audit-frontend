@@ -3,7 +3,11 @@
 }
 
 table {
-	width: 90%;
+	width: 100%;
+  }
+  
+tr.mat-footer-row {
+font-weight: bold;
 }
 
 .mat-elevation-z8{
@@ -15,5 +19,9 @@ th.mat-sort-header-sorted {
 }
 
 td.mat-cell{
+	text-align: left;
+}
+
+.mat-footer-cell{
 	text-align: left;
 }

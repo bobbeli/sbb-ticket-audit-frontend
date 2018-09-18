@@ -16,7 +16,7 @@ export class TicketListComponent implements OnInit {
     @ViewChild(MatSort) sort: MatSort;
     @ViewChild(MatTable) table: MatTable<any>;
 
-    displayedColumns: string[] = ['position', 'name', 'date', 'price'];
+    displayedColumns: string[] = ['position', 'name', 'date', 'price', 'actions'];
     dataSource: any = '';
 
 
@@ -36,5 +36,9 @@ export class TicketListComponent implements OnInit {
 
         this.dataSource = new MatTableDataSource(this.tickets);
         this.dataSource.sort = this.sort;
+    }
+
+    getTotalCost() {
+        return 33;
     }
 }
