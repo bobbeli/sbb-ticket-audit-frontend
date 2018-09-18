@@ -1,5 +1,21 @@
 import {NgModule} from '@angular/core';
-import {MatGridListModule, MatIconModule, MatMenuModule, MatTableModule, MatToolbarModule} from '@angular/material';
+import {MatGridListModule,
+    MatIconModule,
+    MatMenuModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatFormField,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatListModule,
+    MatDialogModule,
+    MatInputBase
+    } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -7,14 +23,30 @@ import {MatGridListModule, MatIconModule, MatMenuModule, MatTableModule, MatTool
         MatToolbarModule,
         MatGridListModule,
         MatIconModule,
-        MatTableModule
+        MatTableModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatButtonModule,
+        MatListModule,
+        MatDialogModule,
+        MatOptionModule,
+        MatSelectModule
     ],
     exports: [
         MatMenuModule,
         MatToolbarModule,
         MatGridListModule,
         MatIconModule,
-        MatTableModule
+        MatTableModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatButtonModule,
+        MatListModule,
+        MatDialogModule,
+        MatOptionModule,
+        MatSelectModule
     ]
 })
 export class SharedModule {}

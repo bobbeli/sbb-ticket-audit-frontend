@@ -12,6 +12,11 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { BodyComponent } from './body/body.component';
 import { MenuComponent } from './header/menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
+import { CreateTicketFormComponent } from './footer/create-ticket-form/create-ticket-form.component';
+import { MatInputModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { TicketService } from './body/tickets/ticket.service';
 
 
 @NgModule({
@@ -22,15 +27,19 @@ import { MenuComponent } from './header/menu/menu.component';
     UserComponent,
     TicketComponent,
     BodyComponent,
-    MenuComponent
+    MenuComponent,
+    FooterComponent,
+    CreateTicketFormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [TicketService],
+  bootstrap: [AppComponent],
+  entryComponents: [CreateTicketFormComponent]
 })
 export class AppModule { }

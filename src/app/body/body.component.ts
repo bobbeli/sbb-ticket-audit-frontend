@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TicketService } from './tickets/ticket.service';
+import { Ticket } from './tickets/ticket.model';
 
 @Component({
   selector: 'app-body',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
   }

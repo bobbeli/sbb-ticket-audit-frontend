@@ -1,10 +1,28 @@
 import {Ticket} from './ticket.model';
+import {Injectable, EventEmitter} from '@angular/core';
 
+@Injectable({
+    providedIn: 'root',
+  })
 export class TicketService {
+    ticketsChanged = new EventEmitter<Ticket[]>();
+
     private tickets: Ticket[] = [
-        new Ticket(1, Date.now(), 'SuperSave', 23.30),
-        new Ticket(2, Date.now(), 'Regular', 3.30),
-        new Ticket(3, Date.now(), 'SuperSave', 83.30)
+        new Ticket(1, new Date(), 'Regular', 12),
+        new Ticket(1, new Date(), 'Regular', 3),
     ];
+
+    addTicket(ticket: Ticket) {
+        this.tickets.push(ticket);
+        this.ticketsChanged.emit(this.tickets.slice());
+    }
+
+    getTickets() {
+        return this.tickets;
+    }
+
+    getLength(): number {
+        return this.tickets.length + 1;
+    }
 
 }
