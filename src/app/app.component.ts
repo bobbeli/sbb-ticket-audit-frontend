@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Ticket } from './body/tickets/ticket.model';
-import { TicketService } from './body/tickets/ticket.service';
+import { Ticket } from './models/ticket.model';
+import { TicketService } from './services/ticket.service';
 
 @Component({
   selector: 'app-root',

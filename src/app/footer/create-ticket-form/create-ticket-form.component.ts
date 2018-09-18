@@ -1,9 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FooterComponent } from '../footer.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import { Ticket } from '../../body/tickets/ticket.model';
+import { Ticket } from '../../models/ticket.model';
 import {FormControl} from '@angular/forms';
-import { TicketService } from '../../body/tickets/ticket.service';
+import { TicketService } from '../../services/ticket.service';
 
 
 @Component({

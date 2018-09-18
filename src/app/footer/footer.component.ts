@@ -1,8 +1,8 @@
 import {Component, Inject, Output, EventEmitter} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { CreateTicketFormComponent } from './create-ticket-form/create-ticket-form.component';
-import { Ticket } from '../body/tickets/ticket.model';
-import { TicketService } from '../body/tickets/ticket.service';
+import { Ticket } from '../models/ticket.model';
+import { TicketService } from '../services/ticket.service';
 
 @Component({
   selector: 'app-footer',

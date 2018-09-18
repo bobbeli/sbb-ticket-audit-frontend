@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild, Input} from '@angular/core';
-import {Ticket} from '../ticket.model';
+import {Ticket} from '../../../models/ticket.model';
 import {MatSort, MatTableDataSource, MatTable} from '@angular/material';
-import { TicketService } from '../ticket.service';
+import { TicketService } from '../../../services/ticket.service';
 import { DataSource } from '@angular/cdk/table';
 
 

@@ -16,7 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CreateTicketFormComponent } from './footer/create-ticket-form/create-ticket-form.component';
 import { MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
-import { TicketService } from './body/tickets/ticket.service';
+import { TicketService } from './services/ticket.service';
 
 
 @NgModule({

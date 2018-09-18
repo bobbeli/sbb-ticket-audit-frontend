@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ticket } from '../ticket.model';
+import { Ticket } from '../../../models/ticket.model';
 
 @Component({
   selector: 'app-ticket',

@@ -1,4 +1,4 @@
-import {Ticket} from './ticket.model';
+import {Ticket} from '../models/ticket.model';
 import {Injectable, EventEmitter} from '@angular/core';
 
 @Injectable({
