@@ -39,6 +39,6 @@ export class TicketListComponent implements OnInit {
     }
 
     getTotalCost() {
-        return 33;
+        return this.tickets.map(t => t.price).reduce((acc, value) => acc + value, 0);
     }
 }
