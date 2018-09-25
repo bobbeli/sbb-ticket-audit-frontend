@@ -8,7 +8,8 @@ import { TicketService } from './services/ticket.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'SBB Money Saver';
+  loadedFeature: string = 'dashboard';
+  title: string = 'Ticketer';
   ticketService: TicketService;
 
   constructor() {
@@ -17,6 +18,10 @@ export class AppComponent {
 
   public get getTitle(): string {
     return this.title;
+  }
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 
 }

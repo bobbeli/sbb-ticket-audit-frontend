@@ -2,7 +2,7 @@
   <mat-icon>more_vert</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
+  <button mat-menu-item (click)="onSelect('settings')">
     <mat-icon>settings</mat-icon>
     <span>Settings</span>
   </button>

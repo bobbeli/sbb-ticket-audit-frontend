@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild, Input} from '@angular/core';
 import {Ticket} from '../../../models/ticket.model';
-import {MatSort, MatTableDataSource, MatTable} from '@angular/material';
+import { MatSort, MatTableDataSource, MatTable, MatPaginator} from '@angular/material';
 import { TicketService } from '../../../services/ticket.service';
 import { DataSource } from '@angular/cdk/table';
 
@@ -14,9 +14,11 @@ export class TicketListComponent implements OnInit {
 
     tickets: Ticket[];
     @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+
     @ViewChild(MatTable) table: MatTable<any>;
 
-    displayedColumns: string[] = ['position', 'name', 'date', 'price', 'actions'];
+    displayedColumns: string[] = ['position', 'name', 'price', 'actions'];
     dataSource: any = '';
 
 
@@ -29,6 +31,8 @@ export class TicketListComponent implements OnInit {
         this.tickets = this.ticketService.getTickets();
         this.ticketService.ticketsChanged.subscribe(
             (updatedTickets: Ticket[]) => {
+                console.log('updated table');
+
                 this.tickets = updatedTickets;
                 this.table.renderRows();
             }
@@ -36,9 +40,17 @@ export class TicketListComponent implements OnInit {
 
         this.dataSource = new MatTableDataSource(this.tickets);
         this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
+
     }
 
     getTotalCost() {
         return this.tickets.map(t => t.price).reduce((acc, value) => acc + value, 0);
+    }
+
+    deleteItem(ticket: Ticket) {
+        this.ticketService.removeTicket(ticket);
+        console.log(ticket);
+
     }
 }

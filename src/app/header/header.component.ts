@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Output } from '@angular/core';
 import { AppComponent } from '../app.component';
+import { MatMenuTrigger } from '@angular/material';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +11,7 @@ import { AppComponent } from '../app.component';
 export class HeaderComponent implements OnInit {
 
   appComponent: AppComponent;
+  @Output() featureSelected = new EventEmitter<string>();
 
   constructor(appComponent: AppComponent) {
     this.appComponent = appComponent;
@@ -16,5 +19,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
+  }
+
+  onSelectSetttings(feature: string) {
+    console.log(feature)
+    this.featureSelected.emit(feature);
+  }
+
 
 }

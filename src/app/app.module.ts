@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { BodyComponent } from './body/body.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateTicketFormComponent } from './footer/create-ticket-form/create-ticket-form.component';
 import { MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { TicketService } from './services/ticket.service';
+import { DashbaordComponent } from './body/dashbaord/dashbaord.component';
+import { SettingsComponent } from './body/settings/settings.component';
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -26,10 +28,11 @@ import { TicketService } from './services/ticket.service';
     HeaderComponent,
     UserComponent,
     TicketComponent,
-    BodyComponent,
     MenuComponent,
     FooterComponent,
-    CreateTicketFormComponent
+    CreateTicketFormComponent,
+    DashbaordComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { TicketService } from './services/ticket.service';
     SharedModule,
     FormsModule
   ],
-  providers: [TicketService],
+  providers: [TicketService, UserService],
   bootstrap: [AppComponent],
   entryComponents: [CreateTicketFormComponent]
 })

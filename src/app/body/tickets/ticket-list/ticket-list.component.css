@@ -6,6 +6,7 @@ table {
 	width: 100%;
   }
   
+
 tr.mat-footer-row {
 font-weight: bold;
 }
@@ -25,3 +26,22 @@ td.mat-cell{
 .mat-footer-cell{
 	text-align: left;
 }
+
+.table-container{
+	overflow: auto;
+}
+
+.cdk-column-actions{
+	text-align: center;
+	width: 5vw;
+}
+
+.cdk-column-position{
+	width: 10vw;
+}
+
+.cdk-column-price{
+	width: 10vw;
+}
+
+

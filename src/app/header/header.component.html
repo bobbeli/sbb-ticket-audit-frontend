@@ -2,8 +2,11 @@
   <span>{{appComponent.getTitle}}</span>
 
   <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+  <span class="example-fill-remaining-space">
+      <button mat-button (click)="onSelect('dashboard')">Dashboard</button>
+      <button mat-button (click)="onSelect('ticket-list')">Tickets</button>
+  </span>
 
-  <app-menu></app-menu>
+  <app-menu (settingsSelected)="onSelectSetttings($event)"></app-menu>
 
 </mat-toolbar>

@@ -15,7 +15,9 @@ import {MatGridListModule,
     MatListModule,
     MatDialogModule,
     MatInputBase,
-    MatFooterRow
+    MatFooterRow,
+    MatPaginatorModule,
+    MatCardModule
     } from '@angular/material';
 
 @NgModule({
@@ -32,7 +34,10 @@ import {MatGridListModule,
         MatListModule,
         MatDialogModule,
         MatOptionModule,
-        MatSelectModule    ],
+        MatSelectModule,
+        MatPaginatorModule,
+        MatCardModule
+        ],
     exports: [
         MatMenuModule,
         MatToolbarModule,
@@ -46,6 +51,8 @@ import {MatGridListModule,
         MatListModule,
         MatDialogModule,
         MatOptionModule,
-        MatSelectModule    ]
+        MatSelectModule,
+        MatPaginatorModule,
+        MatCardModule    ]
 })
 export class SharedModule {}

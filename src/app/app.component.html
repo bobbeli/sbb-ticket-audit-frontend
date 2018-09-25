@@ -1,8 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
 
-  <app-header></app-header>
-  <app-body></app-body>
+  <app-header (featureSelected)="onNavigate($event)"></app-header>
+  
+  <app-dashbaord *ngIf="loadedFeature === 'dashboard'"></app-dashbaord>
+  <app-ticket-list *ngIf="loadedFeature === 'ticket-list'"></app-ticket-list>
+  <app-settings *ngIf="loadedFeature === 'settings'"></app-settings>
+  
   <app-footer></app-footer>
 
 
