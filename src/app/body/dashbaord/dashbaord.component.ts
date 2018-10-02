@@ -20,7 +20,10 @@ export class DashbaordComponent implements OnInit {
     this.user = this.userService.getUser();
     this.totalCoast = this.ticketService.getTotalCoast();
     this.ticketService.totalChanged.subscribe((newTotalCoast: number) => {
-      this.totalCoast = newTotalCoast;
+      if (newTotalCoast) {
+        this.totalCoast = newTotalCoast;
+
+      }
     });
   }
 

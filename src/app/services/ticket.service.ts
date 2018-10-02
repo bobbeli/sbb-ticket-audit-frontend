@@ -30,7 +30,7 @@ export class TicketService {
         this.ticketsChanged.emit(this.tickets.slice());
         this.totalChanged.emit(this.getTotalCoast());
     }
-    
+
     removeTicket(ticket: Ticket) {
         const index = this.tickets.indexOf(ticket);
         this.tickets.splice(index, 1);

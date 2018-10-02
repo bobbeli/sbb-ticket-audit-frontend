@@ -28,7 +28,10 @@ export class FooterComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.ticketService.addTicket(result);
+      if (result.price) {
+        this.ticketService.addTicket(result);
+
+      }
     });
 
   }

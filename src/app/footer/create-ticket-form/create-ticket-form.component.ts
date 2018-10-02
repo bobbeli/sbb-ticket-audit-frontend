@@ -33,12 +33,5 @@ export class CreateTicketFormComponent implements OnInit {
       );
   }
 
-  changeValue(val) {
-    console.log('asdfadf', val);
-  }
-
-  closeDialog(): void {
-    this.dialogRef.close();
-  }
 
 }
