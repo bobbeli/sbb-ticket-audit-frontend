@@ -1,19 +1,21 @@
-export class User {
-    id: number;
-    firstName: string;
-    lastName: string;
-    email: string;
-    avatar: string;
+import { Ticket } from './ticket.model';
 
-    constructor(id: number,
-            firstName: string,
-            lastName: string,
-            email: string,
-            avatar?: string) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.avatar = avatar;
+export class User {
+    _id: string;
+    FirstName: string;
+    LastName: string;
+    Email: string;
+    EmailType: string;
+    TicketList: Ticket[];
+
+    constructor(_id: string,
+        FirstName: string,
+        LastName: string,
+        Email: string) {
+        this._id = _id;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Email = Email;
+        this.TicketList = new Array<Ticket>();
     }
 }

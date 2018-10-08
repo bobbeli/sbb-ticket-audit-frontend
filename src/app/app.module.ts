@@ -19,6 +19,7 @@ import { TicketService } from './services/ticket.service';
 import { DashbaordComponent } from './body/dashbaord/dashbaord.component';
 import { SettingsComponent } from './body/settings/settings.component';
 import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { UserService } from './services/user.service';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [TicketService, UserService],
   bootstrap: [AppComponent],

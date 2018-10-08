@@ -1,0 +1,12 @@
+form{
+    margin-top: 100px;
+}
+
+.mat-form-field{
+    max-width: 250px;
+    width: 70%;
+}
+
+.mat-stroked-button{
+    margin-left: 40px
+}

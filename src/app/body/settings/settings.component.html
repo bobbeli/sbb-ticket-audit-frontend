@@ -1,3 +1,10 @@
-<p>
-  settings works!
-</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" [formControl]="email" 
+           [errorStateMatcher]="matcher">
+    <mat-hint *ngIf="email.invalid">Email Bitte</mat-hint>
+    <mat-hint *ngIf="!email.invalid">Bravo, die nehmen wir.</mat-hint>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <button mat-stroked-button color="primary" (click)="onSubmit(email)" [disabled]="email.invalid" >Submit</button>
+</form>

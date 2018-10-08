@@ -19,6 +19,7 @@ import {MatGridListModule,
     MatPaginatorModule,
     MatCardModule
     } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
@@ -36,7 +37,9 @@ import {MatGridListModule,
         MatOptionModule,
         MatSelectModule,
         MatPaginatorModule,
-        MatCardModule
+        MatCardModule,
+        MatFormFieldModule,
+        ReactiveFormsModule
         ],
     exports: [
         MatMenuModule,
@@ -53,6 +56,8 @@ import {MatGridListModule,
         MatOptionModule,
         MatSelectModule,
         MatPaginatorModule,
-        MatCardModule    ]
+        MatCardModule,
+        MatFormFieldModule,
+        ReactiveFormsModule    ]
 })
 export class SharedModule {}
