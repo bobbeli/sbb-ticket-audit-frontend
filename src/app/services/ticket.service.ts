@@ -9,8 +9,8 @@ export class TicketService {
     totalChanged = new EventEmitter<number>();
 
     private tickets: Ticket[] = [
-        new Ticket('1', new Date(), 'Regular', 12),
-        new Ticket('2', new Date(), 'Regular', 3),
+        new Ticket( this.generateTicketId(), new Date(), 'Regular', 12),
+        new Ticket( this.generateTicketId(), new Date(), 'Regular', 3),
     ];
 
     getTickets() {
@@ -18,7 +18,7 @@ export class TicketService {
     }
 
     getTotalCoast(): number {
-        return this.tickets.map(t => t.Price).reduce((acc, value) => acc + value, 0);
+        return this.tickets.map(t => t.Price).reduce((a, b) => a + b, 0);
     }
 
     getLength(): number {
@@ -36,6 +36,16 @@ export class TicketService {
         this.tickets.splice(index, 1);
         this.ticketsChanged.emit(this.tickets.slice());
         this.totalChanged.emit(this.getTotalCoast());
+    }
+
+    generateTicketId(): string {
+        let text: string = '';
+        const possible: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+        for (let i = 0; i < 16; i++) {
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+        return text;
     }
 
 }

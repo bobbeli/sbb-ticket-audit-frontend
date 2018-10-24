@@ -27,7 +27,7 @@ export class CreateTicketFormComponent implements OnInit {
 
   ngOnInit() {
       this.ticket = new Ticket(
-        this.ticketService.getLength(),
+        this.ticketService.generateTicketId(),
         new Date(),
         'Regular'
       );

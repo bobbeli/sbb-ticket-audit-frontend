@@ -7,7 +7,7 @@ import { User } from '../models/user.model';
 export class UserService {
   userChanged = new EventEmitter<User>();
 
-  private user: User = new User(1, 'Dimitri', 'Suter', 'mail@dimitrisuter.ch');
+  private user: User = new User( 'abcdefghijklmnop', 'Dimitri', 'Suter', 'suterdimitri@gmail.com');
 
   constructor() { }
 

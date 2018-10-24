@@ -16,7 +16,7 @@ export class FooterComponent {
   constructor(public dialog: MatDialog,
     ticketService: TicketService) {
       this.ticketService = ticketService;
-      this.ticket = new Ticket(this.ticketService.getLength(), new Date(), 'Regular');
+      this.ticket = new Ticket(this.ticketService.generateTicketId(), new Date(), 'Regular');
     }
 
 
@@ -28,7 +28,7 @@ export class FooterComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result.price) {
+      if (result.Price) {
         this.ticketService.addTicket(result);
 
       }
