@@ -8,10 +8,7 @@ export class TicketService {
     ticketsChanged = new EventEmitter<Ticket[]>();
     totalChanged = new EventEmitter<number>();
 
-    private tickets: Ticket[] = [
-        new Ticket( this.generateTicketId(), new Date(), 'Regular', 12),
-        new Ticket( this.generateTicketId(), new Date(), 'Regular', 3),
-    ];
+    private tickets: Ticket[] = [];
 
     getTickets() {
         return this.tickets;
