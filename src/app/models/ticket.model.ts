@@ -1,17 +1,17 @@
 export class Ticket {
     _id: string;
-    CreationDate: any;
-    Type: string;
-    Price: number;
+    creationDate: any;
+    type: string;
+    price: number;
 
     constructor(_id?: string,
-        CreationDate?: any,
-        Type?: string,
-        Price?: number) {
+        creationDate?: any,
+        type?: string,
+        price?: number) {
         this._id = _id;
-        this.CreationDate = CreationDate;
-        this.Type = Type;
-        this.Price = Price;
+        this.creationDate = creationDate;
+        this.type = type;
+        this.price = price;
 
     }
 }

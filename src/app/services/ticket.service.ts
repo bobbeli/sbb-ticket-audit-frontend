@@ -15,7 +15,7 @@ export class TicketService {
     }
 
     getTotalCoast(): number {
-        return this.tickets.map(t => t.Price).reduce((a, b) => a + b, 0);
+        return this.tickets.map(t => t.price).reduce((a, b) => a + b, 0);
     }
 
     getLength(): number {

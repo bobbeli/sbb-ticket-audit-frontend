@@ -2,7 +2,7 @@
 <mat-dialog-content>
 
     <mat-form-field>
-        <mat-select placeholder="Type" value="regular" [(ngModel)]="ticket.Type">
+        <mat-select placeholder="Type" value="regular" [(ngModel)]="ticket.type">
           <mat-option value="Regular">Regular</mat-option>
           <mat-option value="Super Saver">Super Saver</mat-option>
         </mat-select>
@@ -14,7 +14,7 @@
             matInput 
             [matDatepicker]="creationDate" 
             placeholder="Choose a date" 
-            [(ngModel)]="ticket.CreationDate"
+            [(ngModel)]="ticket.creationDate"
             >
         <mat-datepicker-toggle matSuffix [for]="creationDate"></mat-datepicker-toggle>
         <mat-datepicker #creationDate></mat-datepicker>
@@ -26,7 +26,7 @@
           type="number" 
           placeholder="Price" 
           class="example-right-align" 
-          [(ngModel)]="ticket.Price" required #input>
+          [(ngModel)]="ticket.price" required #input>
         <span matSuffix>CHF</span>
     </mat-form-field>
   

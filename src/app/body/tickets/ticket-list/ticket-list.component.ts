@@ -46,7 +46,7 @@ export class TicketListComponent implements OnInit {
 
     getTotalCost() {
         if( this.tickets.length > 0 ) {
-            return this.tickets.map(t => t.Price).reduce(this.getSum);
+            return this.tickets.map(t => t.price).reduce(this.getSum);
         }
         return 0;
     }

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/user.model';
+import { Observable } from 'rxjs';
+import { ResponseTicket } from '../interfaces/ticket.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +27,7 @@ export class APIService {
     return this.http.post(this.API + 'ticket/SyncWithmailServer', user, {headers: this.httpHeaders});
   }
 
-  getAllTickets(user: User) {
+  getAllTickets(user: User): Observable<Object> {
     user._id = null;
     return this.http.post(this.API + 'ticket/GetTickets', user, {headers: this.httpHeaders});
   }

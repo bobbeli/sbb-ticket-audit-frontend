@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { APIService } from 'src/app/services/api.service';
@@ -6,7 +7,8 @@ import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
 import { TicketService } from 'src/app/services/ticket.service';
 import { Ticket } from 'src/app/models/ticket.model';
-
+import { Observable } from 'rxjs';
+import { ResponseTicket } from 'src/app/interfaces/ticket.interface';
 
 @Component({
   selector: 'app-settings',
@@ -29,14 +31,13 @@ export class SettingsComponent implements OnInit {
 
   onSubmit(event: FormControl) {
     // ToDo: Create Async request to server with email (event.value)
-    console.log(event.value);
     this.user = this.userService.getUser();
-    this.apiService.getAllTickets(this.user).subscribe((res: Ticket[]) => {
-      console.log(res);
+    this.apiService.getAllTickets(this.user).subscribe((res: ResponseTicket) => {
       if ( res.hasOwnProperty('value') ) {
         res.value.map(t => {
-          const newTicket: Ticket = new Ticket(t._id, t.creationDate, t.type, t.price);
-          this.ticketService.addTicket(newTicket);
+          console.log(t);
+          this.ticketService.addTicket(new Ticket(t._id, t.creationDate, t.type, t.price));
+
         });
       }
     }, err => console.log('err piiser', err));
